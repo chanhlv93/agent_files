@@ -1,0 +1,86 @@
+Download: "wget"
+Extral: "tar -C /usr/local -xzf go$VERSION.$OS-$ARCH.tar.gz"
+Git Clone from Branch: git clone -b mybranch --single-branch git://sub.domain.com/repo.git
+
+ALTER DATABASE containerizationdb CHARACTER SET utf8 COLLATE utf8_unicode_ci;
+
+
+SUCCESS: #5cb85c
+PRIMARY: #337ab7
+DEFAULT: #777
+INFO   : #5bc0de
+WARNING: #f0ad4e
+DANGER : #d9534f
+
+bzip2 -d filename.bz2
+tar -xvf file.tar
+
+List all Port run: netstat -tulpn
+Close port: lsof -i :80
+
+
+SSH COPY
+public@127:~/keys$ scp -i cf-us-east-1.pem ubuntu@54.166.89.100:~/ubuntu-16.04-preinstalled-server-armhf+raspi2.img.xz .
+
+netstat -plten
+sudo netstat -plnt | grep ':80'
+lsof -i:80
+kill -9 75782
+
+GIHUB COMMAND
+Create new branches: $ git checkout -b [name_of_your_new_branch]
+
+bighost.clouday.info 55023
+
+Installing any needed package
+sudo apt-get install gawk wget git-core diffstat unzip texinfo  build-essential chrpath libsdl1.2-dev xterm curl
+
+http://codeintherightway.blogspot.com/2016/01/yocto-on-raspberry-pi.html
+https://github.com/Nuand/bladeRF/wiki/Creating-Linux-based-Embedded-System-Images-with-Yocto
+
+
+    sudo fdisk -l
+    fdisk "name"
+    Type o. This will clear out any partitions on the drive.
+    Type p to list partitions. There should be no partitions left.
+    Type n, then p for primary, 1 for the first partition on the drive, press ENTER to accept the default first sector, then type +100M for the last sector.
+    Type t, then c to set the first partition to type W95 FAT32 (LBA).
+    Type n, then p for primary, 2 for the second partition on the drive, and then press ENTER twice to accept the default first and last sector.
+    Write the partition table and exit by typing w.
+
+ssh -i cf-us-east-1.pem ubuntu@54.174.91.0
+
+http://www.raspberrypi-spy.co.uk/2014/08/how-to-reset-a-forgotten-raspberry-pi-password/
+http://www.cnx-software.com/2015/02/27/yocto-project-raspberry-pi-2-board-minimal-image/
+EXTRA... "apt"
+IMAGE_FEATURES += "package-management" 
+
+sudo dd if=rpi-basic-image-raspberrypi2.rpi-sdimg | pv | sudo dd of=/dev/sdb bs=16M
+Edit cmdline.txt
+init=/bin/sh
+dwc_otg.lpm_enable=0 console=ttyAMA0,115200 kgdboc=ttyAMA0,115200 console=tty1 root=/dev/mmcblk0p2 rootfstype=ext4 elevator=deadline rootwait
+dwc_otg.lpm_enable=0 console=ttyAMA0,115200 kgdboc=ttyAMA0,115200 console=tty1 root=/dev/mmcblk0p2 rootfstype=ext4 elevator=deadline rootwait init=/bin/sh
+
+http://blog.hypriot.com/getting-started-with-docker-and-linux-on-the-raspberry-pi/
+
+username: pirate
+password: hypriot
+
+To clear containers:
+
+    docker rm -f $(docker ps -a -q)
+
+To clear images:
+
+    docker rmi -f $(docker images -a -q)
+
+To clear volumes:
+
+    docker volume rm $(docker volume ls -q)
+
+To clear networks:
+
+    docker network rm $(docker network ls | tail -n+2 | awk '{if($2 !~ /bridge|none|host/){ print $1 }}')
+
+
+

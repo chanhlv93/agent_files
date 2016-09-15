@@ -1,0 +1,45 @@
+HSMDA-KTURY
+
+https://groups.google.com/forum/#!topic/golang-codereviews/qWZ995cWMAE
+https://cloud.google.com/solutions/automated-build-images-with-jenkins-kubernetes
+https://github.com/golang/go/issues/9586
+
+chanhlv github token full permissions: fc1d0207196310539387a9ee435f3008a61459ce
+
+kubernetes.ca.crt
+kubecfg.crt
+kubecfg.key
+
+
+curl --header "Authorization: AbCdEf123456"
+ssh -i dcos-mesosphere.pem ubuntu@54.186.43.42
+
+AKIAJY6ZEETVPGOUU4DA
+GeWdRiB6PsmxVSegjEahycy9pO//fkaEPCawqmAv
+
+Application Name
+Instance type
+Env name
+VPC
+[22:27:08] Nguyen Anh Tu: RDS
+[22:27:15] Nguyen Anh Tu: keypair
+
+
+Unit (app)
+ -Env (env)
+   - app (app-version)
+
+ExampleEC2_DescribeVpcs
+ExampleEC2_DescribeKeyPairs
+ExampleEC2_DescribeSecurityGroups
+http://docs.aws.amazon.com/sdk-for-go/latest/v1/developerguide/common-examples.title.html
+
+http://docs.aws.amazon.com/elasticbeanstalk/latest/dg/vpc-rds.html
+http://docs.aws.amazon.com/elasticbeanstalk/latest/dg/command-options-general.html#command-options-general-ec2vpc
+https://blogs.aws.amazon.com/application-management/post/TxMJROUIFQZ4HS/Setting-Up-the-Jenkins-Plugin-for-AWS-CodeDeploy
+
+
+ssh -i dcos-mesosphere.pem ubuntu@54.186.43.42
+
+http://docs.aws.amazon.com/lambda/latest/dg/welcome.html
+

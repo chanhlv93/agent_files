@@ -1,0 +1,49 @@
+- Jenkins:
++ Database (users) (Chanh)
+  - separate users: map containerization user - jenkins user
++ Credential (Vinh)
+  - create job
++ configuration (build details) (Vinh)
+  - update
++ github API (Tu)
++ API to query build status (Chanh)
+
+
+- Image repository
++ delete image
++ 
+
+- Application deployment
++ 
+
+
+- Kubernetes support
++ Client with SSL
+
+- 
+
+POST http://build.cituscontainerization.com:8080/job/chanhlv-test/1/logText/progressiveHtml
+
+[09:59:59] Nguyen Anh Tu: Jenkins address: http://build.cituscontainerization.com:8080
+[10:00:30] Nguyen Anh Tu: keypair: cf-us-east-1
+
+ssh -i cf-us-east-1.pem ubuntu@build.cituscontainerization.com (52.70.152.61)
+
+http://52.74.252.92
+ssh -i dcos-... ubuntu@54.186.43.42
+
+kubectl delete svc web
+kubectl delete svc mysql-server
+kubectl delete rc web
+kubectl delete rc mysql-server
+
+
+screen -ls
+screen -r id
+Ctrl + A - D (close)
+
+Finished: SUCCESS
+Finished: FAILURE
+
+https://www.youtube.com/watch?v=NzMOBsjazps
+http://genk.vn/cai-dat-va-trai-nghiem-kali-linux-20162-he-dieu-hanh-duoc-cac-hacker-tin-dung-20160906170833863.chn

@@ -1,0 +1,89 @@
+GET APPLICATION
+curl 'https://api.resin.io/v1/application(111043)' -H 'Content-Type: application/json' -H 'Authorization: Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpZCI6OTY4NCwidXNlcm5hbWUiOiJuZ190dW5hIiwiZW1haWwiOiJuZy50dW5hQGdtYWlsLmNvbSIsImZpcnN0X25hbWUiOiJUdSIsImxhc3RfbmFtZSI6Ik5ndXllbiIsImNvbXBhbnkiOiJGUFQtU29mdHdhcmUiLCJzb2NpYWxfc2VydmljZV9hY2NvdW50IjpbXSwiaGFzX2Rpc2FibGVkX25ld3NsZXR0ZXIiOmZhbHNlLCJqd3Rfc2VjcmV0IjoiM1Q2S0xPNlBBNk4zVlJCQkdTTTdFWk02TzZIS1lUWlQiLCJoYXNQYXNzd29yZFNldCI6dHJ1ZSwibmVlZHNQYXNzd29yZFJlc2V0IjpmYWxzZSwicHVibGljX2tleSI6dHJ1ZSwiZmVhdHVyZXMiOltdLCJpbnRlcmNvbVVzZXJOYW1lIjoibmdfdHVuYSIsImludGVyY29tVXNlckhhc2giOiJkZDQ5M2Y2ZWZkNzNhZDYyNTU5YTgyZTkxNGQ5MjdkNjZkZDk2NzViZjVjYTg0ZGM1ZDA2YTRkYjY4YjFkM2U0IiwicGVybWlzc2lvbnMiOltdLCJhY3RvciI6MTE0NjkwLCJpYXQiOjE0NzMxODY0NDksImV4cCI6MTQ3Mzc5MTI0OX0.mOmEIejsrCzUHQ6JXadubR77SJUT77FgyN0CTeXq4oM'
+
+{
+   "d":[
+      {
+         "user":{
+            "__deferred":{
+               "uri":"/resin/user(9684)"
+            },
+            "__id":9684
+         },
+         "app_name":"clidemo",
+         "id":111043,
+         "device_type":"raspberry-pi2",
+         "git_repository":"ng_tuna/clidemo",
+         "commit":"32dff5e0c298a18986949b93cf99e6a4bfa89d6a",
+         "__metadata":{
+            "uri":"/resin/application(111043)",
+            "type":""
+         }
+      }
+   ]
+}
+
+GET DEVICE
+curl "https://api.resin.io/v1/device" -H "Content-Type: application/json" -H "Authorization: Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpZCI6OTY4NCwidXNlcm5hbWUiOiJuZ190dW5hIiwiZW1haWwiOiJuZy50dW5hQGdtYWlsLmNvbSIsImZpcnN0X25hbWUiOiJUdSIsImxhc3RfbmFtZSI6Ik5ndXllbiIsImNvbXBhbnkiOiJGUFQtU29mdHdhcmUiLCJzb2NpYWxfc2VydmljZV9hY2NvdW50IjpbXSwiaGFzX2Rpc2FibGVkX25ld3NsZXR0ZXIiOmZhbHNlLCJqd3Rfc2VjcmV0IjoiM1Q2S0xPNlBBNk4zVlJCQkdTTTdFWk02TzZIS1lUWlQiLCJoYXNQYXNzd29yZFNldCI6dHJ1ZSwibmVlZHNQYXNzd29yZFJlc2V0IjpmYWxzZSwicHVibGljX2tleSI6dHJ1ZSwiZmVhdHVyZXMiOltdLCJpbnRlcmNvbVVzZXJOYW1lIjoibmdfdHVuYSIsImludGVyY29tVXNlckhhc2giOiJkZDQ5M2Y2ZWZkNzNhZDYyNTU5YTgyZTkxNGQ5MjdkNjZkZDk2NzViZjVjYTg0ZGM1ZDA2YTRkYjY4YjFkM2U0IiwicGVybWlzc2lvbnMiOltdLCJhY3RvciI6MTE0NjkwLCJpYXQiOjE0NzMxODY0NDksImV4cCI6MTQ3Mzc5MTI0OX0.mOmEIejsrCzUHQ6JXadubR77SJUT77FgyN0CTeXq4oM"
+
+{
+   "d":[
+      {
+         "id":203431,
+         "uuid":"a2c74789c9c1e9c4a8655d6711cd517b2df710c0590d758b7b88336cc822bd",
+         "name":"throbbing-smoke",
+         "note":null,
+         "device_type":"raspberry-pi2",
+         "application":{
+            "__deferred":{
+               "uri":"/resin/application(111043)"
+            },
+            "__id":111043
+         },
+         "user":{
+            "__deferred":{
+               "uri":"/resin/user(9684)"
+            },
+            "__id":9684
+         },
+         "is_online":false,
+         "last_seen_time":"2016-09-05T11:11:24.033Z",
+         "latitude":"21.0333",
+         "longitude":"105.85",
+         "location":"Hanoi, Thanh Pho Ha Noi, Vietnam",
+         "logs_channel":"f5268c1ce3cc1a4d1f61c26d7d5ecbfc842102b023f6bd84fb5ccbbe39d10c4c",
+         "public_address":"118.70.197.132",
+         "vpn_address":null,
+         "ip_address":"10.16.180.30",
+         "commit":"32dff5e0c298a18986949b93cf99e6a4bfa89d6a",
+         "status":"Idle",
+         "os_version":"Resin OS 1.8.0",
+         "supervisor_version":"1.13.0",
+         "supervisor_release":null,
+         "provisioning_progress":null,
+         "provisioning_state":"",
+         "download_progress":null,
+         "is_web_accessible":true,
+         "__metadata":{
+            "uri":"/resin/device(203431)",
+            "type":""
+         }
+      }
+   ]
+}
+
+CHECK ONLINE
+curl "https://api.resin.io/v1/device(203431)?\$select=is_online" -H "Content-Type: application/json" -H "Authorization: Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpZCI6OTY4NCwidXNlcm5hbWUiOiJuZ190dW5hIiwiZW1haWwiOiJuZy50dW5hQGdtYWlsLmNvbSIsImZpcnN0X25hbWUiOiJUdSIsImxhc3RfbmFtZSI6Ik5ndXllbiIsImNvbXBhbnkiOiJGUFQtU29mdHdhcmUiLCJzb2NpYWxfc2VydmljZV9hY2NvdW50IjpbXSwiaGFzX2Rpc2FibGVkX25ld3NsZXR0ZXIiOmZhbHNlLCJqd3Rfc2VjcmV0IjoiM1Q2S0xPNlBBNk4zVlJCQkdTTTdFWk02TzZIS1lUWlQiLCJoYXNQYXNzd29yZFNldCI6dHJ1ZSwibmVlZHNQYXNzd29yZFJlc2V0IjpmYWxzZSwicHVibGljX2tleSI6dHJ1ZSwiZmVhdHVyZXMiOltdLCJpbnRlcmNvbVVzZXJOYW1lIjoibmdfdHVuYSIsImludGVyY29tVXNlckhhc2giOiJkZDQ5M2Y2ZWZkNzNhZDYyNTU5YTgyZTkxNGQ5MjdkNjZkZDk2NzViZjVjYTg0ZGM1ZDA2YTRkYjY4YjFkM2U0IiwicGVybWlzc2lvbnMiOltdLCJhY3RvciI6MTE0NjkwLCJpYXQiOjE0NzMxODY0NDksImV4cCI6MTQ3Mzc5MTI0OX0.mOmEIejsrCzUHQ6JXadubR77SJUT77FgyN0CTeXq4oM"
+
+{
+   "d":[
+      {
+         "is_online":false,
+         "__metadata":{
+            "uri":"/resin/device(NaN)",
+            "type":""
+         }
+      }
+   ]
+}
+

@@ -1,0 +1,48 @@
+ssh -i cf-us-east-1.pem ubuntu@54.196.224.104 -- Agent
+ssh -i cf-us-east-1.pem ubuntu@54.161.71.236  -- Client
+
+curl -X GET --header "Content-Type:application/json" \
+    "http://54.196.224.104:81/ping?apikey=5E4q5m4jYWdNLP8aZXnNeDAyDftgn8cI"
+
+
+go install -v github.com/resin-io/resin-supervisor/gosuper/gosuper
+
+https://resin.io/blog/device-bandwidthdata-usage-how-low-can-we-go/
+
+ssh -i dcos-mesosphere.pem ubuntu@52.35.177.218
+
+CREATE TABLE Device (
+id INT(6) UNSIGNED AUTO_INCREMENT PRIMARY KEY,
+firstname VARCHAR(30) NOT NULL,
+lastname VARCHAR(30) NOT NULL,
+email VARCHAR(50),
+reg_date TIMESTAMP
+)
+
+public@127:~/keys$ scp -i cf-us-east-1.pem ubuntu@54.196.224.104:~/config/config.json ~/chanhlv
+
+Dang check phan application in client (Create database and api for agent call func get all to compare with local app)
+--> Already edit model, need to create api func select app and implement in agent
+
+go install -v github.com/resin-io/resin-supervisor/gosuper/gosuper
+
+
+config json before bootstrapping device
+{"applicationId":"7","apiKey":"aWSmHBwQoL6IUgEvpBguvsy1FB0HokTj","userId":"141","username":"gh_pcarranzav","deviceType":"raspberry-pi2","files":{"network/settings":"[global]\nOfflineMode=false\n\n[WiFi]\nEnable=true\nTethering=false\n\n[Wired]\nEnable=true\nTethering=false\n\n[Bluetooth]\nEnable=true\nTethering=false","network/network.config":"[service_home_ethernet]\nType = ethernet\nNameservers = 8.8.8.8,8.8.4.4"},"uuid":"","registered_at":,"deviceId":}
+
+docker stop $(docker ps -a -q)
+docker rm $(docker ps -a -q)
+docker run -d --name cli-app -p 80:80 chanhlv93/cli-app
+
+
+// HOW TO RUN PREPARE APPLICATION FOR DEVICES?
+AppId - Commit - ContainerId - Env - ImageId
+
+Load prepare application
++) Way 1
+  => Portal register application --> commit sample code to app repo --> (build image) return commit, appid, imageid to insert database.
+  => After that, when we new device register, get api from api server to fetch image, create, start container and update in agent sqlite db.
++) Solution 2 
+ -> When device register, fetch a default images and create, run container and update on db, --> interval update (if user commit any application and build success, update in cli client(on api-server) database OK, agent will call api get apps to compare (update application function will be call because it's difference with local apps.)
+
+--> coding application update strategy

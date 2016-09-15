@@ -1,0 +1,39 @@
+https://wiki.jenkins-ci.org/display/JENKINS/Installing+Jenkins+on+Ubuntu
+
+Available plugins need install:
+- AWS Elastic Beanstalk Deployment Plugin (http://updates.jenkins-ci.org/download/plugins/awseb-deployment-plugin/0.3.5/awseb-deployment-plugin.hpi)
+- AWS Elastic Beanstalk Publisher Plugin
+- CloudBees Docker Build and Publish plugin
+- GitHub plugin
+
+
+----------------------------------INSTALL DOCKER-----------------------------------------------
+GUIDELINE: https://docs.docker.com/engine/installation/linux/ubuntulinux/
+
+apt-get install apt-transport-https ca-certificates
+apt-key adv --keyserver hkp://p80.pool.sks-keyservers.net:80 --recv-keys 58118E89F3A912897C070ADBF76221572C52609D
+create file "/etc/apt/sources.list.d/docker.list" add "deb https://apt.dockerproject.org/repo ubuntu-trusty main"
+apt-get update
+apt-get purge lxc-docker
+apt-get install docker-engine
+service docker start
+-----------------------------------------------------------------------------------------------
+
+
+-----------------------------------ISSUE------------------------------------------------------
+Issue: https://issues.jenkins-ci.org/browse/JENKINS-32887
+Fix bug aws credential :
+1. cd /var/lib/jenkins/plugins
+2. run command "wget mirror.xmission.com/jenkins/plugins/aws-credentials/1.13/aws-credentials.hpi"
+echo "jenkins ALL=NOPASSWD: ALL" >> /etc/sudoers
+groupadd docker
+service docker restart
+usermod -a -G docker jenkins
+chown root:jenkins /var/run/docker.sock
+/etc/init.d/jenkins restart
+
+Not Check - Prevent Cross Site Request Forgery exploits
+
+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=
+-Create proxy server on aws ec2
+https://gist.github.com/webinista/812c20247a6c21e639ce

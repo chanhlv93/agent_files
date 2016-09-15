@@ -1,0 +1,3 @@
+select app_id as id, created_at as created, migrationapps.name, migrationapps.runtime, version from versionings join migrationapps on versionings.app_id = migrationapps.id where migrationapps.username = 'admin';
+
+

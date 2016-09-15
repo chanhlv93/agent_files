@@ -1,0 +1,57 @@
+
+
+ssh -i cf-us-east-1.pem ubuntu@52.70.152.61
+
+
+0ae6655fc658ee2540ccc4893fa5089c62c68da6 (chanhlv93 github token)
+
+- Environment: Go v1.5.1
+CMD Install env:
+1. wget https://storage.googleapis.com/golang/go1.5.1.linux-amd64.tar.gz
+2. tar -C /usr/local -xzf go1.5.1.linux-amd64.tar.gz
+3. vi /etc/profile --> add "export PATH=$PATH:/usr/local/go/bin"
+4. mkdir gocode
+5. vi /etc/profile --> add end of file "export GOPATH=$HOME/gocode"
+6. apt-get update
+7. apt-get install git-all
+8. apt-get install mercurial meld
+9. go get github.com/revel/revel
+10. vi /etc/profile --> add "export PATH="$PATH:$GOPATH/bin"
+11. apt-get install mysql-server
+12. mysql - u root -p ---> create database containerizationdb;
+13. ALTER DATABASE containerizationdb CHARACTER SET utf8 COLLATE utf8_unicode_ci;
+14. cd gocode/src --> git clone https://chanhlv93@bitbucket.org/ngtuna/containerization.git
+
+
+ssh -i dcos-mesosphere.pem ubuntu@54.186.43.42 (cituscontainerization.com)
+ssh -i dcos-mesosphere.pem ubuntu@52.35.177.218 (migration.cituscontainerization.com)
+
+============PROXY SERVER=====================================
+ssh -i containerization-tools-keypair.pem ubuntu@52.20.80.134
+ssh -i dcos-mesosphere.pem ubuntu@52.35.177.218
+
+--------------------------------------------------------------------------------------------
+Jenkins server
+
+ssh -i vinh-docker-keypair.pem ubuntu@52.77.123.8
+ssh -i vinh-docker-keypair.pem ubuntu@54.254.136.246 ==================
+
+ssh -i vinh-docker-keypair.pem ubuntu@54.169.69.36
+github token: 5669659d4d29dd93c1a32e02d00ead59fe3e4198
+--------------------------------------------------------------------------------------------
+
+ssh -i vinh-docker-keypair.pem ec2-user@54.255.166.96
+
+Github acc chanhlv token full permissions( 41849477e73ecfc2d21bd915a488aa7c2815faa5 )
+ AKIAIZ7YHJU3MVBBDLPA | YMXgF82gQgbIH1AIZXPvDtLm9TDPxhUfw1vr5pow
+
+[default]
+aws_access_key_id=AKIAIZ7YHJU3MVBBDLPA
+aws_secret_access_key=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
+
+ACtion column move to last.
+
+
+git reset --hard <commit> (origin/test)
+http://125.212.217.215:80
+

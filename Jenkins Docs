@@ -1,0 +1,6 @@
+Chanh lưu ý xử lý 2 việc này nhé (a.Vinh nhớ add jira để manage)
+
+1) thêm đoạn code để sau khi con jenkins push image lên DockerHub thì xoá luôn image đấy ở local disk
+
+2) thêm cái crontab để tự động clear jenkins log sau một khoảng thời gian nhất định (7 ngày chẳng hạn). File log này này: /var/log/jenkins/jenkins.log. Chạy lệnh này là được: echo ' ' > jenkins.log
+nhớ làm nhé ko mấy hôm con jenkins lại bị đầy ổ

@@ -1,0 +1,13 @@
+CREATE NEW APPLICATION
+POST http://localhost:8080/v1/app
+{"name":"cli-app","devicetype":"Raspberry Pi 2","repository":"test"}
+
+
+REGISTER NEW DEVICE
+POST http://localhost:8080/v1/device?apikey=e6PYSECvMRwy1m9kaxb3vdloLnFG0DjH
+BODY {"name":"set random","appid":"1","uuid":"8e41b7dd46a6f60daf94c5a0c2d549dd8614b52ed49224a8e6dbf44926075d","devicetype":"Raspberry Pi 2"}
+
+DEVICE UPDATE STATE
+POST http://localhost:8080/v1/device/updatestate?apikey=e6PYSECvMRwy1m9kaxb3vdloLnFG0DjH
+BODY {"appId":1,"deviceId"10:,"state":"updating"}
+
